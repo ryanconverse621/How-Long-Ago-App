@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Long Ago?</title>
+    <link rel="stylesheet" type ="text/css" href="styles.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href = "./login.html">Login</a>
+            <a href = "/">Home</a>
+            <a href = "./info.html">Info</a>
+           </ul> 
+        </nav>
+    </header>
+
+    <h1>Your Current Date</h1>
+
+    <div class="day">
+        <div class="date" id="currentDate"></div>
+    </div>
+
+    <h1>Your Desired Date</h1>
+    <input id="userInput">
+    <button onclick="myFunction()"> Submit </button>
+
+    <h1 id="message">  </h1>
+
+    <footer>
+        <div class="time" id="currentTime"></div>
+    </footer>
+</body>
+</html>
+
+function myFunction() {
+    let userInput = document.querySelector("#userInput");
+    let message = document.querySelector("#message")
+
+    message.innerHTML = "Testing";
+}
+
+function getDate() {
+    let currentDate = new Date();
+    let dayElement = document.querySelector(".day .date");
+
+    // Format the date as desired (e.g., "September 15, 2023")
+    let optionsDate = { year: 'numeric', month: 'long', day: 'numeric' };
+    let formattedDate = currentDate.toLocaleDateString('en-US', optionsDate);
+
+    // Set the formatted date and time as the content of the date and time elements
+    dayElement.textContent = formattedDate;
+}
+
+function getTime()
+ {
+    let currentTime = new Date();
+    let timeElement = document.querySelector(".time");
+
+    let optionsTime = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true};
+    let formattedTime = currentTime.toLocaleTimeString('en-US', optionsTime);
+
+    timeElement.textContent = formattedTime;
+ }
+
+function getHowLongAgo(userInputDate) {
+    const currentDate = getDate();
+    
+
+}
+
+window.addEventListener('load', getDate);
+window.addEventListener('load', getTime);
+
+getDate();
+getTime();
+
+setInterval(getDate, 1000);
+setInterval(getTime, 1000);
+
+body {
+    background-color: #160026;
+    font-family: 'Monaco', 'Ariel', Serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center;
+    list-style: none;
+    padding: 20px;
+    font-size: 100%;
+    border: 2px solid #D70AFB;
+}
+
+header nav {
+    display: flex;
+    gap: 400px; /* Adjust this value to control spacing between links */
+}
+
+header nav a {
+    font-size: 20px;
+    color: #F96B1C;
+    text-decoration: none;
+    transition: text-decoration 0.3s;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    color: #F96B1C;
+    margin-bottom: 10px;    
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    border: 2px solid #D70AFB; 
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    color:#F96B1C;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.day {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F96B1C;
+    width: 75%;
+    height: 75px;
+    border: 2px solid #D70AFB;
+    border-radius: 50px; 
+    margin: 10px auto;
+    margin-bottom: 50px;
+}
+

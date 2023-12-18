@@ -1,0 +1,140 @@
+body {
+    background-color: #160026;
+    font-family: 'Monaco', 'Ariel', Serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center;
+    list-style: none;
+    padding: 20px;
+    font-size: 100%;
+    border: 2px solid #D70AFB;
+}
+
+header nav {
+    display: flex;
+    gap: 400px; /* Adjust this value to control spacing between links */
+}
+
+header nav a {
+    font-size: 20px;
+    color: #F96B1C;
+    text-decoration: none;
+    transition: text-decoration 0.3s;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    color: #F96B1C;
+    margin-bottom: 10px;    
+}
+
+.time {
+    color: #F96B1C;
+    display: flex;
+    width: 20%;
+    height: 50px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-color: #D70AFB;
+    border-radius: 50px;;
+    margin: auto;
+    margin-top: 25px;
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    border: 2px solid #D70AFB; 
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    color:#F96B1C;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.day {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F96B1C;
+    width: 75%;
+    height: 75px;
+    border: 2px solid #D70AFB;
+    border-radius: 50px; 
+    margin: 10px auto;
+    margin-bottom: 50px;
+}
+
+.inputdate {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F96B1C;
+    width: 75%;
+    height: 75px;
+    border: 2px solid #D70AFB;
+    border-radius: 50px; 
+    margin: 10px auto;
+    margin-bottom: 20px;
+}
+
+.input-element{
+    background-color: transparent;
+    border-color: transparent;
+    width: 90%;
+    color: #F96B1C;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.button {
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button #calculateButton {
+    background-color: #160026;
+    color:#F96B1C;
+    border-color:#D70AFB;
+    border-radius: 50px;
+    width: 15%;
+    height: 50px;
+}
+
+hr {
+    border-color: #D70AFB;
+}
+
+.result {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F96B1C;
+    width: 75%;
+    height: 75px;
+    border: 2px solid #D70AFB;
+    border-radius: 50px; 
+    margin: 10px auto;
+    margin-top: 50px;
+}
